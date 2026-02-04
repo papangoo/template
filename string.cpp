@@ -41,7 +41,7 @@ vector<string> split(const string &str, string del = " ") {
 		// if (res != "")
 		tokens.push_back(res);
 
-		start = end + 1;
+		start = end + del.size();
 	}
 	// if (str.substr(start) != "")
 	tokens.push_back(str.substr(start));
