@@ -75,3 +75,20 @@ void get_prime_divisors (ll n, unordered_set<ll,custom_hash> & div, vector<ll> &
 		}
 	}
 }
+
+// better than the above function if we don't have the list of primes and sieve result, but it is slower than the above function if we have the list of primes and sieve result
+void get_prime_divisors (ll n, unordered_set<ll,custom_hash> & div)
+{
+	for (int j = 2; j * j <= n; ++j)
+	{
+		while (n % j == 0)
+		{
+			div.insert(j);
+			n /= j;
+		}
+	}
+	if (n > 1)
+	{
+		div.insert(n);
+	}
+}
