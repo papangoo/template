@@ -31,7 +31,7 @@ priority_queue< pair<int,int>, vector< pair<int,int> >, mycomparison> pq(mycompa
 
 // normal with custom comparison
 
-priority_queue<int,vector<int>,less<int>> left_h; // max heap
+priority_queue<int,vector<int>,less<int>> left_h; // max heap (default)
 priority_queue<int,vector<int>,greater<int>> right_h; // min heap
 
 
